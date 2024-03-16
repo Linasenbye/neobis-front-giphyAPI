@@ -7,7 +7,13 @@ body {
     margin: 0;
     padding: 0;
 }
-
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
 .navbar {
     background: linear-gradient(0.25turn, rgb(217, 135, 220), rgb(175, 81, 218), rgb(42, 176, 220), rgb(68, 224, 68));
     display: flex;
@@ -43,6 +49,9 @@ body {
 }
 
 .search-box {
+    display: block;
     border: none;
     width: 250px;
+    width: 100%;
+    font-size: 1.125rem;
 }
