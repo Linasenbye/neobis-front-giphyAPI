@@ -19,7 +19,8 @@ input, button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1.25em;
+    width: 100%;
 }
 .logo {
     display: flex;
@@ -28,22 +29,22 @@ input, button {
     
 }
 .logo img {
-    width: 80px;
-    height: 80px;
+    width: 5em;
+    height: 5em;
 }
 
 .logo p {
-    font-size: 50px;
+    font-size: 3.125em;
     font-weight: 600;
     color: white;
 }
 
 .search {
-    width: 300px;
+    width: 18.75em;
     background-color: white;
     color: black;
-    padding: 15px ;
-    border-radius: 25px;
+    padding: 1em;
+    border-radius: 1.5em;
     display: flex;
     justify-content: space-between;
 }
@@ -51,7 +52,32 @@ input, button {
 .search-box {
     display: block;
     border: none;
-    width: 250px;
+    width: 15.625em;
     width: 100%;
     font-size: 1.125rem;
 }
+
+.wrapper {
+    margin: 1em;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container img {
+    width: 38em;
+    height: 18.75em;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px){
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }  
+}
+@media screen and (max-width: 576px){
+    .wrapper {
+        grid-template-columns: 1fr;
+    }  
+}
+
