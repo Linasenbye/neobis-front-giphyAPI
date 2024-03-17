@@ -20,8 +20,9 @@ input, button {
     justify-content: space-between;
     align-items: center;
     padding: 1.25em;
-    width: 100%;
+    
 }
+
 .logo {
     display: flex;
     justify-content: space-between;
@@ -58,14 +59,18 @@ input, button {
 }
 
 .wrapper {
-    margin: 1em;
+    margin-top: 1em;
     display: grid;
-    grid-gap: 1em;
+    grid-gap: 2em;
     grid-template-columns: repeat(3, 1fr);
+}
+.container {
+    display: flex;
+    justify-content: space-around;    
 }
 
 .container img {
-    width: 38em;
+    width: 29em;
     height: 18.75em;
     object-fit: cover;
 }
@@ -74,10 +79,15 @@ input, button {
     .wrapper {
         grid-template-columns: repeat(2, 1fr);
     }  
+
 }
 @media screen and (max-width: 576px){
     .wrapper {
         grid-template-columns: 1fr;
+
     }  
+    .logo p {
+        display: none;
+    }
 }
 

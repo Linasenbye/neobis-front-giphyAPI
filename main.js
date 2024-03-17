@@ -18,8 +18,8 @@ let generateGif = () => {
       //All Gifs
       let gifsData = info.data;
       gifsData.forEach((gif) => {
+        
           //Generate Cards for every gif
-
           let container = document.createElement("div");
           container.classList.add("container");
           let iframe = document.createElement("img");
@@ -38,13 +38,10 @@ let generateGif = () => {
     });
     
 }
-//Generate Gifs on screen load or when user cliks on search
-
+//Generate Gifs on screen load, when user cliks on search, or presses the "Enter" key on the keyboard
 window.addEventListener("load", generateGif);
 searchBtn.addEventListener("click", generateGif);
-
 searchInput.addEventListener("keypress", function(event) {
-  // If the user presses the "Enter" key on the keyboard
   if (event.key === "Enter") {
     generateGif();
   }
